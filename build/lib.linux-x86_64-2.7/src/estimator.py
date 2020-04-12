@@ -14,45 +14,53 @@ population = 66622705
 totalHospitalBeds = 1380614
 #starting the coding for the covid-19 assessment
 # declaring global varibles
+
 currentlyInfected  = reportedCases * 10
 severelyInfected = reportedCases * 50
 
 infectionByRequestedTime = currentlyInfected * 10242
 infectionByRequestedTime2 = severelyInfected * 10242
 
+
+#solving challenage 2
+#estimating the sun of severe positive patients
+
+severeCasesByRequestedTime = infectionByRequestedTime / 15
+
+
+
 #declaring function
 def estimator():
 
-    data = [
+    data = {
         name,
         avgAge,
         avgDailyIncomeInUSD,
         avgDailyIncomePopulation
 
-    ]
-    impact = [
+    }
+    impact = {
         currentlyInfected,
         infectionByRequestedTime
-    ]
-    severeImpact = [
+    }
+    severeImpact = {
         severelyInfected,
         infectionByRequestedTime2
-    ]
-    
+    }
     print('\ncomputing the data of the affected area')
-    print(f'name = {data[0]}')
-    print(f'avgAge = {data[1]}')
-    print(f'avgDailyIncomeInUSD = {data[2]}')
-    print(f'avgDailyIncomePopulation = {data[3]}')
+    print(f'name = {list(data)[3]}')
+    print(f'avgAge = {list(data)[2]}')
+    print(f'avgDailyIncomeInUSD = {list(data)[1]}')
+    print(f'avgDailyIncomePopulation = {list(data)[0]}')
 
     print('\nestimating the impact level of the pendemic')
-    print(f'currentlyInfected = {impact[0]}')
-    print(f'infectionByRequestedTime = {impact[1]}')
+    print(f'currentlyInfected = {list(impact)[1]}')
+    print(f'currentlyInfected = {list(impact)[0]}')
 
 
     print('\nestimating the severeImpact level of the pandemic')
-    print(f'severelyInfected = {severeImpact[0]}')
-    print(f'infectionByRequestedTime = {severeImpact[1]}')
+    print(f'severelyInfected = {list(severeImpact)[1]}')
+    print(f'infectionByRequestedTime = {list(severeImpact)[0]}')
 
 
 estimator()
