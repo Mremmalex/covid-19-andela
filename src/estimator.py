@@ -1,6 +1,4 @@
-#! /usr/bin/env python3.8.2
 
-#declaring function
 def estimator():
         data = {
         "region" : {
