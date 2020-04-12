@@ -29,6 +29,7 @@ def estimator():
                 multiplier = 30
             return int( multiplier * data['timeToElapse'] / 3)
 
+
         factor()
         infectionByRequestedTime = currentlyInfected * 2**factor()
         infectionByRequestedTime2 = severelyInfected * 2**factor()
